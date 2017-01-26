@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F0208B81E3189EA007392DA /* MoodsInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0208B71E3189EA007392DA /* MoodsInterfaceController.swift */; };
+		3F0208BA1E318A35007392DA /* MoodRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0208B91E318A35007392DA /* MoodRowController.swift */; };
 		3F4499CC1E2701A6008B30E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4499CB1E2701A6008B30E8 /* AppDelegate.swift */; };
 		3F4499CE1E2701A6008B30E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4499CD1E2701A6008B30E8 /* ViewController.swift */; };
 		3F4499D11E2701A6008B30E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F4499CF1E2701A6008B30E8 /* Main.storyboard */; };
@@ -21,6 +23,12 @@
 		3F4499F51E2701A7008B30E8 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4499F41E2701A7008B30E8 /* NotificationController.swift */; };
 		3F4499F71E2701A7008B30E8 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4499F61E2701A7008B30E8 /* ComplicationController.swift */; };
 		3F4499F91E2701A7008B30E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F4499F81E2701A7008B30E8 /* Assets.xcassets */; };
+		3F4BCB801E39214000F4CA1F /* Mood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4BCB7F1E39214000F4CA1F /* Mood.swift */; };
+		3F4BCB821E39575700F4CA1F /* MoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4BCB811E39575700F4CA1F /* MoodCell.swift */; };
+		3F4BCB841E39621400F4CA1F /* NotificationsInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4BCB831E39621400F4CA1F /* NotificationsInterfaceController.swift */; };
+		6F47331251B877F91ECD98CB /* Pods_dailymood.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E905614D22260DE665490BC2 /* Pods_dailymood.framework */; };
+		7AB27E2CF2CF575EC6CC9E11 /* Pods_dailymood_WatchKit_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0750D53F3218292458B15AFA /* Pods_dailymood_WatchKit_App.framework */; };
+		AED71BB336ACB331B3E641C1 /* Pods_dailymood_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6FB6B510943A461376EEEAF /* Pods_dailymood_WatchKit_Extension.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +74,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0750D53F3218292458B15AFA /* Pods_dailymood_WatchKit_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dailymood_WatchKit_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E628F47B484897CAE7ABD77 /* Pods-dailymood.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dailymood.debug.xcconfig"; path = "Pods/Target Support Files/Pods-dailymood/Pods-dailymood.debug.xcconfig"; sourceTree = "<group>"; };
+		34688F115BE9621CB9896792 /* Pods-dailymood WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dailymood WatchKit Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-dailymood WatchKit Extension/Pods-dailymood WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
+		3F0208B71E3189EA007392DA /* MoodsInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoodsInterfaceController.swift; sourceTree = "<group>"; };
+		3F0208B91E318A35007392DA /* MoodRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoodRowController.swift; sourceTree = "<group>"; };
 		3F4499C81E2701A6008B30E8 /* dailymood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dailymood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F4499CB1E2701A6008B30E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F4499CD1E2701A6008B30E8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -85,6 +98,15 @@
 		3F4499F61E2701A7008B30E8 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
 		3F4499F81E2701A7008B30E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F4499FA1E2701A7008B30E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F4BCB7F1E39214000F4CA1F /* Mood.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mood.swift; sourceTree = "<group>"; };
+		3F4BCB811E39575700F4CA1F /* MoodCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoodCell.swift; sourceTree = "<group>"; };
+		3F4BCB831E39621400F4CA1F /* NotificationsInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsInterfaceController.swift; sourceTree = "<group>"; };
+		90A833445B186B6B0D6DEB5A /* Pods-dailymood WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dailymood WatchKit Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-dailymood WatchKit Extension/Pods-dailymood WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		B001BAA3BB0BEE4B16FFEE58 /* Pods-dailymood WatchKit App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dailymood WatchKit App.release.xcconfig"; path = "Pods/Target Support Files/Pods-dailymood WatchKit App/Pods-dailymood WatchKit App.release.xcconfig"; sourceTree = "<group>"; };
+		B178F57C0E6E26A4A65E500C /* Pods-dailymood.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dailymood.release.xcconfig"; path = "Pods/Target Support Files/Pods-dailymood/Pods-dailymood.release.xcconfig"; sourceTree = "<group>"; };
+		D71C66697443A22E7998E317 /* Pods-dailymood WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dailymood WatchKit App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-dailymood WatchKit App/Pods-dailymood WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
+		E905614D22260DE665490BC2 /* Pods_dailymood.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dailymood.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6FB6B510943A461376EEEAF /* Pods_dailymood_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dailymood_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F47331251B877F91ECD98CB /* Pods_dailymood.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +122,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AED71BB336ACB331B3E641C1 /* Pods_dailymood_WatchKit_Extension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85181E2F52718937C86FB17D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7AB27E2CF2CF575EC6CC9E11 /* Pods_dailymood_WatchKit_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +144,8 @@
 				3F4499DE1E2701A6008B30E8 /* dailymood WatchKit App */,
 				3F4499ED1E2701A7008B30E8 /* dailymood WatchKit Extension */,
 				3F4499C91E2701A6008B30E8 /* Products */,
+				66675A463376845DE7AC389F /* Pods */,
+				FAC5A2698953497CEF57194D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -134,6 +168,8 @@
 				3F4499D21E2701A6008B30E8 /* Assets.xcassets */,
 				3F4499D41E2701A6008B30E8 /* LaunchScreen.storyboard */,
 				3F4499D71E2701A6008B30E8 /* Info.plist */,
+				3F4BCB7F1E39214000F4CA1F /* Mood.swift */,
+				3F4BCB811E39575700F4CA1F /* MoodCell.swift */,
 			);
 			path = dailymood;
 			sourceTree = "<group>";
@@ -151,10 +187,13 @@
 		3F4499ED1E2701A7008B30E8 /* dailymood WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				3F4499F01E2701A7008B30E8 /* InterfaceController.swift */,
 				3F4499F21E2701A7008B30E8 /* ExtensionDelegate.swift */,
+				3F4499F01E2701A7008B30E8 /* InterfaceController.swift */,
 				3F4499F41E2701A7008B30E8 /* NotificationController.swift */,
 				3F4499F61E2701A7008B30E8 /* ComplicationController.swift */,
+				3F0208B71E3189EA007392DA /* MoodsInterfaceController.swift */,
+				3F0208B91E318A35007392DA /* MoodRowController.swift */,
+				3F4BCB831E39621400F4CA1F /* NotificationsInterfaceController.swift */,
 				3F4499F81E2701A7008B30E8 /* Assets.xcassets */,
 				3F4499FA1E2701A7008B30E8 /* Info.plist */,
 				3F4499EE1E2701A7008B30E8 /* Supporting Files */,
@@ -170,6 +209,29 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		66675A463376845DE7AC389F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1E628F47B484897CAE7ABD77 /* Pods-dailymood.debug.xcconfig */,
+				B178F57C0E6E26A4A65E500C /* Pods-dailymood.release.xcconfig */,
+				D71C66697443A22E7998E317 /* Pods-dailymood WatchKit App.debug.xcconfig */,
+				B001BAA3BB0BEE4B16FFEE58 /* Pods-dailymood WatchKit App.release.xcconfig */,
+				90A833445B186B6B0D6DEB5A /* Pods-dailymood WatchKit Extension.debug.xcconfig */,
+				34688F115BE9621CB9896792 /* Pods-dailymood WatchKit Extension.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FAC5A2698953497CEF57194D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E905614D22260DE665490BC2 /* Pods_dailymood.framework */,
+				0750D53F3218292458B15AFA /* Pods_dailymood_WatchKit_App.framework */,
+				F6FB6B510943A461376EEEAF /* Pods_dailymood_WatchKit_Extension.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -177,10 +239,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3F449A051E2701A7008B30E8 /* Build configuration list for PBXNativeTarget "dailymood" */;
 			buildPhases = (
+				C174B0967085BC2BE87FFED8 /* [CP] Check Pods Manifest.lock */,
 				3F4499C41E2701A6008B30E8 /* Sources */,
 				3F4499C51E2701A6008B30E8 /* Frameworks */,
 				3F4499C61E2701A6008B30E8 /* Resources */,
 				3F449A041E2701A7008B30E8 /* Embed Watch Content */,
+				412F4BFBF2F1FAABE38F0D0B /* [CP] Embed Pods Frameworks */,
+				5D88ECB48FB0C0F40E33CA3E /* [CP] Copy Pods Resources */,
+				3F8501331E284E3A00A972AB /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -196,8 +262,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3F449A011E2701A7008B30E8 /* Build configuration list for PBXNativeTarget "dailymood WatchKit App" */;
 			buildPhases = (
+				53C8A1DCEECB8FD97B9AE2A8 /* [CP] Check Pods Manifest.lock */,
 				3F4499D81E2701A6008B30E8 /* Resources */,
 				3F449A001E2701A7008B30E8 /* Embed App Extensions */,
+				85181E2F52718937C86FB17D /* Frameworks */,
+				B60A4A3CA8736424F26D84D6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -213,9 +282,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3F4499FD1E2701A7008B30E8 /* Build configuration list for PBXNativeTarget "dailymood WatchKit Extension" */;
 			buildPhases = (
+				A2853EEBC7508FF3F2517D87 /* [CP] Check Pods Manifest.lock */,
 				3F4499E51E2701A7008B30E8 /* Sources */,
 				3F4499E61E2701A7008B30E8 /* Frameworks */,
 				3F4499E71E2701A7008B30E8 /* Resources */,
+				A49301D1AD1889E805665624 /* [CP] Embed Pods Frameworks */,
+				0AAE470B393C98BDA9D1C1C5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -303,11 +375,149 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0AAE470B393C98BDA9D1C1C5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-dailymood WatchKit Extension/Pods-dailymood WatchKit Extension-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3F8501331E284E3A00A972AB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" e710d0677c3dfae4aa9b5579701895fd4d273bd0 ce30eeabefc00718997b19c220f2fd7cdfeb152ea511449e6d117a17272bb1d7";
+		};
+		412F4BFBF2F1FAABE38F0D0B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-dailymood/Pods-dailymood-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		53C8A1DCEECB8FD97B9AE2A8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5D88ECB48FB0C0F40E33CA3E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-dailymood/Pods-dailymood-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A2853EEBC7508FF3F2517D87 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A49301D1AD1889E805665624 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-dailymood WatchKit Extension/Pods-dailymood WatchKit Extension-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B60A4A3CA8736424F26D84D6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-dailymood WatchKit App/Pods-dailymood WatchKit App-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C174B0967085BC2BE87FFED8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3F4499C41E2701A6008B30E8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F4BCB821E39575700F4CA1F /* MoodCell.swift in Sources */,
+				3F4BCB801E39214000F4CA1F /* Mood.swift in Sources */,
 				3F4499CE1E2701A6008B30E8 /* ViewController.swift in Sources */,
 				3F4499CC1E2701A6008B30E8 /* AppDelegate.swift in Sources */,
 			);
@@ -317,8 +527,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F0208B81E3189EA007392DA /* MoodsInterfaceController.swift in Sources */,
 				3F4499F51E2701A7008B30E8 /* NotificationController.swift in Sources */,
 				3F4499F71E2701A7008B30E8 /* ComplicationController.swift in Sources */,
+				3F0208BA1E318A35007392DA /* MoodRowController.swift in Sources */,
+				3F4BCB841E39621400F4CA1F /* NotificationsInterfaceController.swift in Sources */,
 				3F4499F31E2701A7008B30E8 /* ExtensionDelegate.swift in Sources */,
 				3F4499F11E2701A7008B30E8 /* InterfaceController.swift in Sources */,
 			);
@@ -460,6 +673,7 @@
 		};
 		3F4499FE1E2701A7008B30E8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90A833445B186B6B0D6DEB5A /* Pods-dailymood WatchKit Extension.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				DEVELOPMENT_TEAM = TZRX6AQ237;
@@ -477,6 +691,7 @@
 		};
 		3F4499FF1E2701A7008B30E8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34688F115BE9621CB9896792 /* Pods-dailymood WatchKit Extension.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				DEVELOPMENT_TEAM = TZRX6AQ237;
@@ -494,6 +709,7 @@
 		};
 		3F449A021E2701A7008B30E8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D71C66697443A22E7998E317 /* Pods-dailymood WatchKit App.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -512,6 +728,7 @@
 		};
 		3F449A031E2701A7008B30E8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B001BAA3BB0BEE4B16FFEE58 /* Pods-dailymood WatchKit App.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -530,6 +747,7 @@
 		};
 		3F449A061E2701A7008B30E8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E628F47B484897CAE7ABD77 /* Pods-dailymood.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = TZRX6AQ237;
@@ -543,6 +761,7 @@
 		};
 		3F449A071E2701A7008B30E8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B178F57C0E6E26A4A65E500C /* Pods-dailymood.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = TZRX6AQ237;
@@ -573,6 +792,7 @@
 				3F4499FF1E2701A7008B30E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3F449A011E2701A7008B30E8 /* Build configuration list for PBXNativeTarget "dailymood WatchKit App" */ = {
 			isa = XCConfigurationList;
@@ -581,6 +801,7 @@
 				3F449A031E2701A7008B30E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3F449A051E2701A7008B30E8 /* Build configuration list for PBXNativeTarget "dailymood" */ = {
 			isa = XCConfigurationList;
@@ -589,6 +810,7 @@
 				3F449A071E2701A7008B30E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

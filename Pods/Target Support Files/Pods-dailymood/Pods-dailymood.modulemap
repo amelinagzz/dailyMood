@@ -1,0 +1,6 @@
+framework module Pods_dailymood {
+  umbrella header "Pods-dailymood-umbrella.h"
+
+  export *
+  module * { export * }
+}

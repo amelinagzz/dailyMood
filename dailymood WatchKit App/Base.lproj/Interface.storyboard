@@ -1,39 +1,114 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11055"/>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11508"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider="target"/>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="dailymood_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label width="0.90000000000000002" alignment="center" verticalAlignment="center" text="Daily Mood" textAlignment="center" id="Hcz-Ev-FmO"/>
+                        <separator alignment="center" verticalAlignment="center" id="Zkw-yX-50i">
+                            <color key="color" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </separator>
+                        <button width="0.90000000000000002" alignment="center" verticalAlignment="center" title="How are you feeling?" id="7DQ-2O-va0">
+                            <connections>
+                                <segue destination="gTB-gj-7Eo" kind="push" id="Uaz-Q4-bUw"/>
+                            </connections>
+                        </button>
+                        <button width="0.90000000000000002" alignment="center" verticalAlignment="center" title="Remind me" id="PrR-FA-6FC">
+                            <connections>
+                                <segue destination="2VC-UV-FwO" kind="push" id="KgO-9U-AVe"/>
+                            </connections>
+                        </button>
+                    </items>
+                </controller>
             </objects>
-            <point key="canvasLocation" x="220" y="345"/>
+            <point key="canvasLocation" x="139" y="127"/>
+        </scene>
+        <!--Notifications Interface Controller-->
+        <scene sceneID="5YL-wK-h1c">
+            <objects>
+                <controller id="2VC-UV-FwO" customClass="NotificationsInterfaceController" customModule="dailymood_WatchKit_Extension">
+                    <items>
+                        <label alignment="left" text="Check for the next:" numberOfLines="2" id="Qw9-sZ-LQY"/>
+                        <picker height="70" alignment="left" focusStyle="stack" id="qGa-BM-n5l">
+                            <connections>
+                                <action selector="pickerChanged:" destination="2VC-UV-FwO" id="KnI-Z5-de9"/>
+                            </connections>
+                        </picker>
+                        <button width="1" alignment="left" title="Start" id="NmR-Tx-I2f">
+                            <connections>
+                                <action selector="startTapped" destination="2VC-UV-FwO" id="jV3-ta-FK0"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Delete reminders" id="3Ik-sx-OGD">
+                            <connections>
+                                <action selector="deleteTapped" destination="2VC-UV-FwO" id="Pu8-dS-ZRG"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="picker" destination="qGa-BM-n5l" id="AFl-Hl-7em"/>
+                        <outlet property="startTapped" destination="NmR-Tx-I2f" id="JU2-4g-P9u"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="139" y="496"/>
+        </scene>
+        <!--Moods-->
+        <scene sceneID="yK9-uO-2gg">
+            <objects>
+                <controller identifier="Moods" id="gTB-gj-7Eo" customClass="MoodsInterfaceController" customModule="dailymood_WatchKit_Extension">
+                    <items>
+                        <table alignment="left" id="ljU-Mi-UCL">
+                            <items>
+                                <tableRow identifier="moodRow" id="7s9-6D-zmg" customClass="MoodRowController" customModule="dailymood_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="a3q-ud-Ris">
+                                        <items>
+                                            <imageView width="0.34999999999999998" height="0.84999999999999998" alignment="left" verticalAlignment="center" image="happy" contentMode="scaleAspectFit" id="jW1-Kr-FTs"/>
+                                            <separator alignment="left" id="f9V-Oy-zel">
+                                                <color key="color" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </separator>
+                                            <label width="0.64000000000000001" height="0.90000000000000002" alignment="left" verticalAlignment="center" text="Happy" id="YGz-gy-6H7"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="image" destination="jW1-Kr-FTs" id="qSN-41-SCa"/>
+                                        <outlet property="label" destination="YGz-gy-6H7" id="CmQ-St-ZYZ"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="table" destination="ljU-Mi-UCL" id="8OO-ya-qtA"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="392" y="127"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
             <objects>
                 <notificationController id="YCC-NB-fut">
                     <items>
-                        <label alignment="left" text="Alert Label" id="IdU-wH-bcW"/>
+                        <label alignment="left" text="Log your mood now?" numberOfLines="2" id="IdU-wH-bcW"/>
                     </items>
                     <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
                     <connections>
                         <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
-                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
                     </connections>
                 </notificationController>
             </objects>
-            <point key="canvasLocation" x="220" y="643"/>
-        </scene>
-        <!--Notification Controller-->
-        <scene sceneID="ZPc-GJ-vnh">
-            <objects>
-                <controller id="4sK-HA-Art" customClass="NotificationController" customModuleProvider="target"/>
-            </objects>
-            <point key="canvasLocation" x="468" y="643"/>
+            <point key="canvasLocation" x="139" y="799"/>
         </scene>
     </scenes>
 </document>

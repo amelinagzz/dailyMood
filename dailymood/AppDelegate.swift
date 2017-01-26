@@ -7,15 +7,27 @@
 //
 
 import UIKit
+import Fabric
+import Crashlytics
+import WatchConnectivity
+import RealmSwift
+import NotificationCenter
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
 
     var window: UIWindow?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        Fabric.with([Crashlytics.self])
+        
+        if WCSession.isSupported(){
+            WCSession.default().delegate = self
+            WCSession.default().activate()
+        }
+        
         return true
     }
 
@@ -41,6 +53,52 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    //Watch connectivity
+    
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        if error != nil {
+            print("Error: \(error)")
+        }else{
+            print("Ready to communicate with apple watch.")
+        }
+    }
+    
+    func sessionDidBecomeInactive(_ session: WCSession) {
+        print("Inactive")
+    }
+    
+    func sessionDidDeactivate(_ session: WCSession) {
+        print("Deactivated")
+        WCSession.default().activate()
+
+    }
+    
+    func session(_ session: WCSession, didReceiveUserInfo userInfo: [String : Any] = [:]) {
+        print("This is the user info \(userInfo)")
+        
+        //Create Mood object and save it into realm
+        
+        let mood = Mood()
+        
+        guard let date = userInfo["date"] as? NSDate, let name = userInfo["name"] as? String else{
+            return
+        }
+        mood.name = name
+        mood.date = date
+        
+        let realm = try! Realm()
+        
+        
+        try! realm.write {
+            realm.add(mood)
+        }
+        
+        //Send notification
+        
+        let notification = Notification(name:Notification.Name(rawValue: "gotNewMood"))
+        NotificationCenter.default.post(notification)
+    }
+    
 
 }
 

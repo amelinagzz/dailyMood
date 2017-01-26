@@ -7,8 +7,10 @@
 //
 
 import WatchKit
+import WatchConnectivity
+import UserNotifications
 
-class ExtensionDelegate: NSObject, WKExtensionDelegate {
+class ExtensionDelegate: NSObject, WKExtensionDelegate, WCSessionDelegate, UNUserNotificationCenterDelegate {
 
     func applicationDidFinishLaunching() {
         // Perform any final initialization of your application.
@@ -16,6 +18,11 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate {
 
     func applicationDidBecomeActive() {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        if WCSession.isSupported(){
+            WCSession.default().delegate = self
+            WCSession.default().activate()
+        }
+        
     }
 
     func applicationWillResignActive() {
@@ -45,6 +52,41 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate {
                 task.setTaskCompleted()
             }
         }
+    }
+    
+    //Watch connectivity
+    
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        if error != nil {
+            print("Error: \(error)")
+        }else{
+        print("Ready to communicate with iOS device.")
+        }
+    }
+    
+    //Notifications
+    
+    func askForPermission(){
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound]) { (authBool, error) in
+            if authBool{
+                
+                let yesAction = UNNotificationAction(identifier: "yesAction", title: "Yes", options: [.foreground])
+                let noAction = UNNotificationAction(identifier: "noAction", title: "No", options: [])
+
+                let category = UNNotificationCategory(identifier: "moodCategory", actions: [yesAction, noAction], intentIdentifiers: [], options: [])
+                UNUserNotificationCenter.current().setNotificationCategories([category])
+                UNUserNotificationCenter.current().delegate = self
+            }
+        }
+    }
+
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        
+        if response.actionIdentifier == "yesAction"{
+            WKExtension.shared().rootInterfaceController?.popToRootController()
+            WKExtension.shared().rootInterfaceController?.pushController(withName: "Moods", context: nil)
+        }
+        
     }
 
 }
