@@ -44,7 +44,18 @@ class MoodsInterfaceController: WKInterfaceController {
         
         let mood = moods[rowIndex]
         let date = Date()
+        UserDefaults.standard.set(mood.title, forKey: "lastMood")
+        UserDefaults.standard.synchronize()
+        
         WCSession.default().transferUserInfo(["date":date,"name":mood.title])
+        
+        if CLKComplicationServer.sharedInstance().activeComplications != nil{
+            for comp in CLKComplicationServer.sharedInstance().activeComplications!{
+                CLKComplicationServer.sharedInstance().reloadTimeline(for: comp)
+            }
+        }
+        
+        
         pop()
     }
     
